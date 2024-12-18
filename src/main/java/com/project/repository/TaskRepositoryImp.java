@@ -6,12 +6,13 @@ import java.util.List;
 
 public class TaskRepositoryImp implements TaskRepository{
     @Override
-    public Task createTask() {
+    public Boolean saveTask(Task task) {
+
         return null;
     }
 
     @Override
-    public Task updateTask(Integer id, String description) {
+    public Task updateTask(Task task) {
         return null;
     }
 
@@ -27,6 +28,11 @@ public class TaskRepositoryImp implements TaskRepository{
 
     @Override
     public Boolean markDone(Integer id) {
+        return null;
+    }
+
+    @Override
+    public Task getTaskById(Integer id) {
         return null;
     }
 

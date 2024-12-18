@@ -5,11 +5,12 @@ import com.project.model.Task;
 import java.util.List;
 
 public interface TaskRepository {
-    Task createTask();
-    Task updateTask(Integer id, String description);
+    Boolean saveTask(Task task);
+    Task updateTask(Task task);
     Boolean deleteTask(Integer id);
     Boolean markInProgress(Integer id);
     Boolean markDone(Integer id);
+    Task getTaskById(Integer id);
     List<Task> getAllTask();
     List<Task> getByStatusTodo();
     List<Task> getByStatusInProgress();

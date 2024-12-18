@@ -13,18 +13,17 @@ public class Task {
     private final Instant createdAt;
     private Instant updatedAt;
 
-    public Task(String description, Optional<Integer> currentId) {
+    public Task(String description, Integer currentId) {
         this.updatedAt = Instant.now();
         this.createdAt = Instant.now();
         this.status = Status.todo;
         this.description = description;
-        this.id = createId(currentId);
+        this.id = currentId;
     }
 
-    private Integer createId(Optional<Integer> currentId){
-        return currentId.orElse(1);
+    public Integer getId() {
+        return id;
     }
-
 
     public Instant getUpdatedAt() {
         return updatedAt;
